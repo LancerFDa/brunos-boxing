@@ -25,6 +25,7 @@ jacocoTestReport {
 
 
 dependencies {
+    implementation 'com.git.freva:ascii-table:1.9.0'
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
 
@@ -45,7 +46,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'edu.teamrocket.brunosboxing.App'
+    mainClass = 'edu.teamrocket.brunosboxing.BrunosBox'
 }
 
 tasks.named('test') {
