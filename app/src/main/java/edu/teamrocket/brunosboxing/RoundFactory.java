@@ -8,6 +8,7 @@ public class RoundFactory {
             case null -> null;
             case "10 - 9", "9 - 10" -> new RegularRound(roundScore);
             case "10 - 8", "8 - 10" -> new KnockdownRound(roundScore);
+            case "10 - 8,1", "10 - 1,8", "8,1 - 10", "1,8 - 10" -> new PointsDeducted(roundScore);
             default -> null;
         };
     }
