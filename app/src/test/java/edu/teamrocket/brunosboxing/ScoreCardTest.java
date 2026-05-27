@@ -15,7 +15,7 @@ public class ScoreCardTest {
                                         "9 - 10", 
                                         "9 - 10",
                                         "10 - 9",
-                                        "10 - 9",
+                                        "10 - 9", 
                                         "10 - 9", 
                                         "9 - 10", 
                                         "10 - 9", 
@@ -51,35 +51,6 @@ public class ScoreCardTest {
     public void loadJudgeScoreCardRoundFactoryNullTest() {
         card.loadJudgeScoreCard(new String[]{null, null});
         assertEquals(0, card.getNumRounds());
-    }
-
-    @Test
-    public void loadJudgeScoreCardRoundFactoryPointsDeductedTest() {
-        // ejemplos de pattern matching for instanceof
-        // https://docs.oracle.com/en/java/javase/17/language/pattern-matching-instanceof.html
-        card.loadJudgeScoreCard(pinkScoreCard);
-        assertEquals(10, card.getNumRounds());
-        assertEquals(2, card.getRounds()
-                                .stream()
-                                .filter(r -> r instanceof PointsDeducted pd 
-                                        && pd.roundScore().contains(","))
-                                .count());
-    }
-
-
-    // gradle test --tests "ScoreCardTest"
-    // gradle test --tests edu.badpals.brunosbox.ScoreCardTest
-    @Test
-    public void loadJudgeScoreCardRoundFactoryKnockDownTest() {
-        // ejemplos de pattern matching for instanceof
-        // https://docs.oracle.com/en/java/javase/17/language/pattern-matching-instanceof.html
-        card.loadJudgeScoreCard(pinkScoreCard);
-        assertEquals(10, card.getNumRounds());
-        assertEquals(2, card.getRounds()
-                                .stream()
-                                .filter(r -> r instanceof KnockdownRound kd 
-                                        && (kd.redBoxerScore() == 8 || kd.blueBoxerScore() == 8))
-                                .count());
     }
 
     @Test

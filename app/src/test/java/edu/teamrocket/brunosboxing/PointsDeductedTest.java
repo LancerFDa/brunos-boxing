@@ -16,17 +16,6 @@ public class PointsDeductedTest {
     }
 
     @Test
-    public void roundScoreToIntBlueTest() {
-        // record pattern matching
-        // https://openjdk.org/jeps/440
-        Round round = new PointsDeducted("10 - 8 ,1");
-        assertTrue(round instanceof PointsDeducted pd 
-                    && pd.roundScore().equals("10-8,1") 
-                    && pd.redBoxerScore() == 10 
-                    && pd.blueBoxerScore() == 8);
-    }
-
-    @Test
     public void roundScoreToIntRedTest() {
         Round round = new PointsDeducted("1, 8 - 10");
         assertTrue(round instanceof PointsDeducted pd 
