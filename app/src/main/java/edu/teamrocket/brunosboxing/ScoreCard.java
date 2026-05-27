@@ -15,4 +15,12 @@ public class ScoreCard {
     ScoreCard(String color){
         this.color = color;
     }
+
+    void setRCorner(String redCorner) {
+        this.redCorner = redCorner;
+    }
+
+    void setBCorner(String blueCorner) {
+        this.blueCorner = blueCorner;
+    }
 }
