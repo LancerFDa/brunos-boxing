@@ -20,4 +20,9 @@ record  KnockdownRound (String roundScore, byte redBoxerScore, byte blueBoxerSco
         String[] score = roundScore.replaceAll("\\s", "").split("-", 2);
         return Byte.parseByte(score[boxer.corner()]);
     }
+
+    @Override
+    public String toString() {
+        return redBoxerScore() + " - " + blueBoxerScore();
+    }
 }

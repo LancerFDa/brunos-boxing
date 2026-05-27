@@ -14,10 +14,13 @@ record RegularRound(String roundScore, byte redBoxerScore, byte blueBoxerScore) 
         );
     }
 
-
-
     private static Byte parseBoxerRoundScore(String roundScore, Boxer boxer){
         String[] score = roundScore.replaceAll("\\s", "").split("-", 2);
         return Byte.parseByte(score[boxer.corner()]);
+    }
+
+    @Override
+    public String toString() {
+        return redBoxerScore() + " - " + blueBoxerScore();
     }
 }

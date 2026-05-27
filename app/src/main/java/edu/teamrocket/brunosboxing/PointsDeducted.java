@@ -28,4 +28,9 @@ record PointsDeducted(String roundScore, byte redBoxerScore, byte blueBoxerScore
     private static byte parseComa(String score){
         return Byte.parseByte(score.substring(score.indexOf(",") + 1));
     }
+
+    @Override
+    public String toString() {
+        return redBoxerScore() + " - " + blueBoxerScore();
+    }
 }
