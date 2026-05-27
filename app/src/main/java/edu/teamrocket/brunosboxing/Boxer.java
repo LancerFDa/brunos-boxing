@@ -1,11 +1,11 @@
 package edu.teamrocket.brunosboxing;
 
-public enum Boxers {
-    RED((byte)0), BUE((byte)1);
+public enum Boxer {
+    RED((byte)0), BLUE((byte)1);
      
     private final byte corner;
      
-    private Boxers(byte corner){
+    private Boxer(byte corner){
         this.corner = corner;
     }
 
